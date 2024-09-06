@@ -1,17 +1,18 @@
 import time
 
-while True:
-    try:
-        toCount = input("Enter the number: ")
-        startTime = time.time()
-
-        def massiveCounting(maxNumber):
+def massiveCounting(maxNumber):
             count = 0
             while count <= maxNumber:
                 count += 1
                 currentTime = time.time()
             resultTime = currentTime - startTime
             return resultTime
+
+while True:
+    try:
+        toCount = input("Enter the number: ")
+        startTime = time.time()
+
         ourResult = massiveCounting(int(toCount))
         print(f"Computer count this for {ourResult} seconds")
         askYN = input("Wanna some number again?: ").lower()
